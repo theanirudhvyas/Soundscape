@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="App2.show_song"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="show_it" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!--TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="30" Margin="117,40,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="233" SelectionChanged="textBlock_SelectionChanged"/-->
+        <Image x:Name="image" HorizontalAlignment="Left" Height="803" VerticalAlignment="Top" Source="Assets/bnd.png" Opacity=".7
+               " Width="360" Margin="0,0,0,-163"/>
+        <ListView x:Name="SongList" HorizontalAlignment="Left" Height="620" Margin="14,38,-150,-18" VerticalAlignment="Top" Width="496"  SelectionChanged="MySelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Padding="0,20,0,30">
+                        <TextBlock Text="{Binding song_name}" FontFamily="Aleo" FontSize="18.667" FontWeight="Bold" Foreground="#FF063C72" />
+                        <TextBlock Text="{Binding artist_name}" FontFamily="Aleo" FontSize="17.333" FontStyle="Italic" />
+                        <StackPanel Orientation="Horizontal">
+                            <Button Margin="2"  x:Name="youtube" Content="Youtube" HorizontalAlignment="Right" VerticalAlignment="Stretch" Click="youtube_Click" Background="Red" Foreground="#FFFFFDFD" />
+                            <Button Margin="2" x:Name="Soundcloud" Content="SoundCloud" HorizontalAlignment="Right" VerticalAlignment="Stretch" Click="Soundcloud_Click" Background="#FFFF8800" Foreground="#FF033953"  />
+                            <!--Image Margin="2" x:Name="image1" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Source="Heart-icon.png" Width="100"/-->
+
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+        </ListView>
+        <AppBarButton x:Name="button1" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0" Icon="back" Height="40" Width="45" Click="button_Click"  />
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Source="Heart-icon.png" Width="100"/>
+
+        <!--Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="46" Margin="212,108,0,0" VerticalAlignment="Top" Width="47"/-->
+        <!--Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="46" Margin="273,108,0,0" VerticalAlignment="Top" Width="47"/-->
+
+    </Grid>
+</Page>

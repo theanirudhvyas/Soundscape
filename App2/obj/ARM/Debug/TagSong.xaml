@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="App2.TagSong"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps">
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <maps:MapControl x:ConnectionId='1' x:Name="myMap" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalAlignment="Bottom"                       Height="630" Width="360" MapServiceToken="mRd6KQr6PpKfN9JWEDtI~hQCvIxC7cYyzC0ylJWy_8w~AmO_MCgutKd-LICQK4Waca6U1OJAUeeUqNFSMQGCgii3EELz3MYkOCC6k_At2Ih5"                            />
+        <Button x:ConnectionId='2' x:Name="add_song" Content="ADD" HorizontalAlignment="Left" Margin="251.761,178.106,-0.913,0" VerticalAlignment="Top" Width="109.152" Height="30.724" RenderTransformOrigin="0.516,1.837" UseLayoutRounding="False" d:LayoutRounding="Auto"                        Background="#FF112945" FontFamily="Aleo" FontWeight="Bold" Foreground="White">
+            <Button.RenderTransform>
+                <CompositeTransform TranslateY="-130.967" Rotation="359.827" SkewX="-0.771" TranslateX="-10.363"/>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:ConnectionId='3' x:Name="song_name" HorizontalAlignment="Left" TextAlignment="Center" Margin="10,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="225" RenderTransformOrigin="0.489,0.531"  Height="16" FontFamily="Aleo" FontWeight="Bold" BorderBrush="#FF112945" SelectionHighlightColor="#FF010B18"/>
+        <AppBarButton x:ConnectionId='4' x:Name="button" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0" Icon="back" Height="40" Width="45"                       />
+        <!--CheckBox x:Name="checkBox" Content="Use location from map" HorizontalAlignment="Left" Margin="38,174,0,0" VerticalAlignment="Top"/-->
+        <!--AppBarButton x:Name="appBarButton" Icon="Find"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="182,23,0,0" FontSize="26.667" Height="36" Width="31" Click="appBarButton_Click"/-->
+
+
+    </Grid>
+</Page>
+
